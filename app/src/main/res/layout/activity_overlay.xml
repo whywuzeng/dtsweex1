@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/overlay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/overlay_bom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:padding="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical">
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="车辆监控信息"
+        android:textColor="#333"
+        android:textSize="17sp"/>
+
+       <ImageView
+           android:id="@+id/esc"
+           android:layout_alignParentRight="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/shanchu"/>
+   </RelativeLayout>
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/overlay_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间:"
+            android:textColor="#333"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_toRightOf="@+id/overlay_date_text"
+            android:id="@+id/overlay_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="#333"
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/overlay_sta_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前状态:"
+            android:textColor="#333"
+            android:layout_toLeftOf="@+id/overlay_sta"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/overlay_sta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text=""
+            android:textColor="#333"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/overlay_name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="司机名称:"
+                android:textColor="#333"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_toRightOf="@+id/overlay_name_text"
+                android:id="@+id/overlay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=""
+                android:textColor="#333"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/overlay_tel_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="司机电话:"
+                android:textColor="#333"
+                android:layout_toLeftOf="@+id/overlay_tel"
+                android:textSize="15sp"/>
+
+            <TextView
+
+                android:id="@+id/overlay_tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:textColor="#333"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+</RelativeLayout>
+</LinearLayout>
